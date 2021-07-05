@@ -21,3 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.DS_Store
+Chapter6/FirstTest-6.1/target/classes/META-INF/MANIFEST.MF
+Chapter6/FirstTest-6.1/target/classes/META-INF/maven/com.cusey/camel-junit-first-6.1/pom.properties
