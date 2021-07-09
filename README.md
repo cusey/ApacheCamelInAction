@@ -13,8 +13,7 @@
 
 ###  [SpringFirstTest-6.3](https://github.com/cusey/ApacheCamelInAction/tree/main/Chapter6/SpringFirstTest-6.3) 
 
-**Description:** You call the route build from another package. You don’t want to copy the code from the src/main/java into a JUnit class.     
-
+**Description:** In this example I define the route in the src/main/java FileMoveRoute class. In the JUnit class I uses the createRouteBuilder method to create RouteBuilder object to be returned to CamelTestSupport class. 
 
 ###  [CamelRiderTest-6.4](https://github.com/cusey/ApacheCamelInAction/tree/main/Chapter6/CamelRiderTest-6.4)  
 
