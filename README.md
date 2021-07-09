@@ -9,7 +9,7 @@
 
 ###  [FirstTest-6.1](https://github.com/cusey/ApacheCamelInAction/tree/main/Chapter6/FirstTest-6.1)  
 
-**Description:** A first unit test using the Camel Test Kit. This is the “Hello World” example for integration kits that moves files from one folder to another. This project demonstrates how to clean directories in the setup method.    
+**Description:** A first unit test using the Camel Test Kit. This is the “Hello World” example for integration kits that moves files from one folder to another. By overriding the createRouteBuilder method which is in the CamelTestSupport class, you can provide any route builder you wish. This project demonstrates how to clean directories in the setup method.       
 
 ###  [SpringFirstTest-6.3](https://github.com/cusey/ApacheCamelInAction/tree/main/Chapter6/SpringFirstTest-6.3) 
 

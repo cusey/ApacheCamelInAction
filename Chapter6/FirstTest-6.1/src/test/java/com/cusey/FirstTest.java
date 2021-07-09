@@ -25,7 +25,7 @@ public class FirstTest extends CamelTestSupport {
 					logger.debug(" <<<< FirstTest - createRouteBuilder >>>> ");
 
 					/*
-					 *  In the testMoveFile method creates the file. When the file is created this method 
+					 * 3) In the testMoveFile method creates the file. When the file is created this method 
 					 *  moves from inbox to the outbox
 					 */
 					from("file://target/inbox").to("file://target/outbox");
@@ -35,7 +35,7 @@ public class FirstTest extends CamelTestSupport {
 	
 	public void setUp() throws Exception {
 		
-		//Clean the two directories
+		//1) Clean the two directories
 		deleteDirectory("target/inbox");
 		deleteDirectory("target/outbox");
 		
@@ -49,24 +49,24 @@ public class FirstTest extends CamelTestSupport {
 		logger.debug("  <<<<  FirstTest - testMoveFile >>>> ");
 		
 		/*
-		 * This is producer template that creates the file to be used by the router 
+		 * 2) This is producer template that creates the file to be used by the router 
 		 */
 		template.sendBodyAndHeader("file://target/inbox", "Hello World", Exchange.FILE_NAME, "hello.txt");
 		
 		/*
-		 * Wait for the RouteBuilder to move the file
+		 * 4) Wait for the RouteBuilder to move the file
 		 */
 		Thread.sleep(1000);
 		
 		/*
-		 * This just get the file to check if it exists in the outbox
+		 * 5) This just get the file to check if it exists in the outbox
 		 */
 		File target = new File("target/outbox/hello.txt");
 		
 		assertTrue("File not moved", target.exists());
 		
 		/*
-		 * Converting the contents ("Hello World") of the file to a string and save it.
+		 * 6) Converting the contents ("Hello World") of the file to a string and save it.
 		 */
 		String content = context.getTypeConverter().convertTo(String.class, target);
 		
